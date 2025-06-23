@@ -227,13 +227,11 @@
     const pass = document.getElementById('pass').value;
     if (pass === correctPass) {
       document.querySelector('.container').style.display = 'none'; // ẩn khối nhập pass
-      setTimeout(() => {
-      const frame = document.getElementById('mkochFrame');
-      frame.src = "mkoch.html";
-      frame.style.display = 'block';
-    }, 200); // Thời gian nhẹ tránh bị đơ trên điện thoại
-  } else {
-    alert('Sai rồi babe 😘');
+      document.getElementById('mkochFrame').style.display = 'block'; // hiện iframe
+      document.getElementById('mkochFrame').src = "mkoch.html";
+    } else {
+      alert('Sai rồi babe 😘');
+    }
     }
   }
 </script>
