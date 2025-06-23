@@ -203,27 +203,27 @@
 
 <script>
     const correctPass = "24";
-    const redirectURL = "https://phuocnguyen68.github.io/MungEmIu/mkoch.html"; 
 
-    function appendNum(num) {
+<iframe id="mkochFrame" style="display:none; width:100%; height:100vh; border:none;"></iframe>
+<script>
+  function submitPass() {
+    const pass = document.getElementById('pass').value;
+    if (pass === "24") {
+      document.querySelector('.container').style.display = 'none'; // ẩn khối nhập pass
+      document.getElementById('mkochFrame').style.display = 'block'; // hiện iframe
+      document.getElementById('mkochFrame').src = "mkoch.html";
+    } else {
+      alert('Sai rồi babe 😘');
+    }
+  }
+
+  function appendNum(num) {
       const input = document.getElementById('pass');
       if (input.value.length < 6) input.value += num;
     }
 
     function clearPass() {
       document.getElementById('pass').value = '';
-    }
-
-    function submitPass() {
-      const pass = document.getElementById('pass').value;
-      if (pass === correctPass) {
-        document.body.classList.add('hidden');
-        setTimeout(() => {
-          window.location.href = redirectURL;
-        }, 800);
-      } else {
-        alert('sai rui babe oiiii😊');
-      }
     }
 
     // Hiện hiệu ứng khi trang tải
