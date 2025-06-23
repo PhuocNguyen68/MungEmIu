@@ -222,6 +222,9 @@
       const frame = document.getElementById('mkochFrame');
       frame.style.display = 'block';
       frame.src = "mkoch.html";
+      setTimeout(() => {
+          window.location.href = redirectURL;
+        }, 800);
     } else {
       alert('Sai rồi babe 😘');
     }
