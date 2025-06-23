@@ -204,34 +204,33 @@
 
 
 <script>
-    const correctPass = "11";
-    const redirectURL = "file:///G:/buff/w1/mkoch/web/mkoch.html"; // Đổi thành link thật của bạn
+    const correctPass = "24";
+const redirectURL = "mkoch.html"; // hoặc dùng URL tuyệt đối
 
-    function appendNum(num) {
-      const input = document.getElementById('pass');
-      if (input.value.length < 6) input.value += num;
-    }
+function appendNum(num) {
+  const input = document.getElementById('pass');
+  if (input.value.length < 6) input.value += num;
+}
 
-    function clearPass() {
-      document.getElementById('pass').value = '';
-    }
+function clearPass() {
+  document.getElementById('pass').value = '';
+}
 
-    function submitPass() {
-      const pass = document.getElementById('pass').value;
-      if (pass === correctPass) {
-        document.body.classList.add('hidden');
-        setTimeout(() => {
-          window.location.href = redirectURL;
-        }, 800);
-      } else {
-        alert('sai rui vk oiiii😊');
-      }
-    }
+function submitPass() {
+  const pass = document.getElementById('pass').value;
+  if (pass === correctPass) {
+    document.body.classList.add('hidden');
+    setTimeout(() => {
+      window.location.href = redirectURL;
+    }, 800);
+  } else {
+    alert('Sai rồi Babe oiiii 😊');
+  }
+}
 
-    // Hiện hiệu ứng khi trang tải
-    window.onload = () => {
-      document.body.classList.remove('hidden');
-    };
+window.onload = () => {
+  document.body.classList.remove('hidden');
+};
   </script>
 </body>
 </html>
