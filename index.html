@@ -203,20 +203,6 @@
 
 <script>
     const correctPass = "24";
-
-<iframe id="mkochFrame" style="display:none; width:100%; height:100vh; border:none;"></iframe>
-<script>
-  function submitPass() {
-    const pass = document.getElementById('pass').value;
-    if (pass === "24") {
-      document.querySelector('.container').style.display = 'none'; // ẩn khối nhập pass
-      document.getElementById('mkochFrame').style.display = 'block'; // hiện iframe
-      document.getElementById('mkochFrame').src = "mkoch.html";
-    } else {
-      alert('Sai rồi babe 😘');
-    }
-  }
-
   function appendNum(num) {
       const input = document.getElementById('pass');
       if (input.value.length < 6) input.value += num;
@@ -231,5 +217,20 @@
       document.body.classList.remove('hidden');
     };
   </script>
+
+<iframe id="mkochFrame" style="display:none; width:100%; height:100vh; border:none;"></iframe>
+
+<script>
+  function submitPass() {
+    const pass = document.getElementById('pass').value;
+    if (pass === "24") {
+      document.querySelector('.container').style.display = 'none'; // ẩn khối nhập pass
+      document.getElementById('mkochFrame').style.display = 'block'; // hiện iframe
+      document.getElementById('mkochFrame').src = "mkoch.html";
+    } else {
+      alert('Sai rồi babe 😘');
+    }
+  }
+</script>
 </body>
 </html>
