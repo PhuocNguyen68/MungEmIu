@@ -201,7 +201,7 @@
     </div>
   </div>
 
-<iframe id="mkochFrame" style="display:none; width:100%; height:100vh; border:none;"></iframe>
+
 
 <script>
   const correctPass = "24";
@@ -216,17 +216,11 @@
   }
 
   function submitPass() {
-    const pass = document.getElementById('pass').value;
-    if (pass === correctPass) {
-      document.querySelector('.container').style.display = 'none';
-      const frame = document.getElementById('mkochFrame');
-      frame.style.display = 'block';
-      frame.src = "mkoch.html";
-      setTimeout(() => {
-          window.location.href = redirectURL;
-        }, 800);
-    } else {
-      alert('Sai rồi babe 😘');
+  const pass = document.getElementById('pass').value;
+  if (pass === correctPass) {
+    window.location.href = "mkoch.html"; // chuyển sang trang khác
+  } else {
+    alert('Sai rồi babe 😘');
     }
   }
 
