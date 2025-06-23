@@ -204,29 +204,34 @@
 
 
 <script>
-  const correctPass = "24";
+    const correctPass = "11";
+    const redirectURL = "file:///G:/buff/w1/mkoch/web/mkoch.html"; // Đổi thành link thật của bạn
 
-  function appendNum(num) {
-    const input = document.getElementById('pass');
-    if (input.value.length < 6) input.value += num;
-  }
-
-  function clearPass() {
-    document.getElementById('pass').value = '';
-  }
-
-  function submitPass() {
-  const pass = document.getElementById('pass').value;
-  if (pass === "24") {
-    window.location.href = "mkoch.html"; // chuyển hẳn sang trang mkoch.html
-  } else {
-    alert('Sai rồi babe 😘');
+    function appendNum(num) {
+      const input = document.getElementById('pass');
+      if (input.value.length < 6) input.value += num;
     }
-  }
 
-  window.onload = () => {
-    document.body.classList.remove('hidden');
-  };
-</script>
+    function clearPass() {
+      document.getElementById('pass').value = '';
+    }
+
+    function submitPass() {
+      const pass = document.getElementById('pass').value;
+      if (pass === correctPass) {
+        document.body.classList.add('hidden');
+        setTimeout(() => {
+          window.location.href = redirectURL;
+        }, 800);
+      } else {
+        alert('sai rui vk oiiii😊');
+      }
+    }
+
+    // Hiện hiệu ứng khi trang tải
+    window.onload = () => {
+      document.body.classList.remove('hidden');
+    };
+  </script>
 </body>
 </html>
